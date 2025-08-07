@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScholarSwap | Student Marketplace</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .category-card {
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    .category-card:hover {
+      border-color: #a78bfa;
+      box-shadow: 0 0 15px #a78bfa88;
+    }
+    .search-bar {
+      color: black;
+    }
+    .search-bar::placeholder {
+      color: #999;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-dark-900 text-white">
+
+  <!-- Header -->
+  <header class="glass-card sticky top-0 z-50 bg-dark-800">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-exchange-alt text-primary-500 text-2xl"></i>
+        <h1 class="text-2xl font-bold gradient-text">ScholarSwap</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+      <a href="#" class="text-purple-500 font-semibold hover:text-purple-400 transition duration-300">Home</a>
+      <a href="browse.html" class="hover:text-purple-400 transition duration-300">Browse</a>
+      <a href="sell.html" class="hover:text-purple-400 transition duration-300">Sell</a>
+      <a href="contact.html" class="hover:text-purple-400 transition duration-300">Contact Us</a>
+      <a href="profile.html" class="hover:text-purple-400 transition duration-300">Profile</a>
+      </nav>
+
+
+      <button class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 pt-16 pb-6 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Buy & Sell <span class="gradient-text">Student Resources</span></h1>
+    <p class="text-lg text-primary-200 max-w-2xl mx-auto mb-10">
+      The ultimate marketplace for college students to exchange textbooks, electronics, stationery and more.
+    </p>
+    <div class="max-w-2xl mx-auto relative mb-10">
+      <input type="text" placeholder="Search for textbooks, laptops, notes..." 
+             class="w-full py-4 px-6 rounded-full bg-dark-800 border border-primary-800 focus:outline-none search-bar transition duration-300">
+      <button class="absolute right-2 top-2 bg-primary-600 text-white py-2 px-6 rounded-full btn-primary">
+        <i class="fas fa-search mr-2"></i> Search
+      </button>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="container mx-auto px-4 pt-2 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Category Card 1 -->
+      <div class="category-card bg-dark-800 p-8 rounded-2xl cursor-pointer">
+        <div class="w-16 h-16 bg-primary-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-book text-2xl text-primary-400"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-2">Textbooks</h3>
+        <p class="text-primary-300 text-center">Buy and sell used textbooks at student-friendly prices</p>
+      </div>
+
+      <!-- Category Card 2 -->
+      <div class="category-card bg-dark-800 p-8 rounded-2xl cursor-pointer">
+        <div class="w-16 h-16 bg-primary-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-laptop text-2xl text-primary-400"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-2">Electronics</h3>
+        <p class="text-primary-300 text-center">Laptops, tablets, calculators and other tech essentials</p>
+      </div>
+
+      <!-- Category Card 3 -->
+      <div class="category-card bg-dark-800 p-8 rounded-2xl cursor-pointer">
+        <div class="w-16 h-16 bg-primary-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-pen-fancy text-2xl text-primary-400"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-2">Stationery</h3>
+        <p class="text-primary-300 text-center">Notebooks, pens, art supplies and more</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

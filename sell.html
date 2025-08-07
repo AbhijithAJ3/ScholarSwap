@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell Items | ScholarSwap</title>
+
+  <!-- Tailwind CDN, if used globally -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main shared CSS for your site -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Sell-specific styles -->
+  <link rel="stylesheet" href="sell.css">
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="glass-card sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-exchange-alt text-purple-500 text-2xl"></i>
+        <h1 class="text-2xl font-bold gradient-text">ScholarSwap</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="hover:text-purple-400 transition duration-300">Home</a>
+        <a href="browse.html" class="hover:text-purple-400 transition duration-300">Browse</a>
+        <a href="sell.html" class="text-purple-500 font-semibold hover:text-purple-400 transition duration-300">Sell</a>
+        <a href="contact.html" class="hover:text-purple-400 transition duration-300">Contact Us</a>
+        <a href="profile.html" class="hover:text-purple-400 transition duration-300">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row sell-container">
+      <!-- Sell Form -->
+      <div class="glass-card p-8 rounded-xl flex-1">
+        <h2 class="text-3xl font-bold mb-6 gradient-text">Sell Your Items</h2>
+
+        <form id="sellForm" class="space-y-6">
+          <div>
+            <label for="productName" class="block mb-2 font-medium">Product Name *</label>
+            <input type="text" id="productName" name="productName"
+              placeholder="e.g. Calculus Textbook, Scientific Calculator" required>
+          </div>
+          <div>
+            <label for="description" class="block mb-2 font-medium">Description *</label>
+            <textarea id="description" name="description" rows="4"
+              placeholder="Describe your item in detail (condition, edition, etc.)" required></textarea>
+          </div>
+          <div>
+            <label for="category" class="block mb-2 font-medium">Category *</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select a category</option>
+              <option value="textbooks">Textbooks</option>
+              <option value="notes">Class Notes</option>
+              <option value="stationery">Stationery</option>
+              <option value="electronics">Electronics</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="price" class="block mb-2 font-medium">Price (₹) *</label>
+            <input type="number" id="price" name="price" placeholder="Enter price in INR" min="0" step="1" required>
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Upload Images (Max 5) *</label>
+            <div class="file-upload" id="fileUpload">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop images here or click to browse</p>
+              <input type="file" id="imageUpload" name="images" accept="image/*" multiple style="display: none;">
+            </div>
+            <div class="image-preview-container" id="imagePreviewContainer"></div>
+          </div>
+          <div>
+            <label for="email" class="block mb-2 font-medium">Contact Email *</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+          </div>
+          <div class="pt-4">
+            <button type="submit" class="btn-primary w-full py-3 font-semibold">
+              <i class="fas fa-paper-plane mr-2"></i> Submit Listing
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Instructions Section -->
+      <div class="glass-card p-8 rounded-xl instructions md:ml-8 md:w-96">
+        <h3 class="text-xl font-bold mb-4 gradient-text">Selling Tips & Safety</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Be honest about the condition of your item to avoid disputes.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Take clear, well-lit photos from multiple angles.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Set a fair price - check similar listings for reference.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Meet in public places on campus for exchanges.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Never share personal financial information.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+            <span>Use ScholarSwap's messaging system for all communications.</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content glass-card relative">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="text-center">
+        <i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Listing Submitted!</h3>
+        <p class="mb-6">Your item has been successfully listed on ScholarSwap. You'll be notified when someone is interested.</p>
+        <div class="flex space-x-4 justify-center">
+          <button class="btn-primary px-6" id="viewListing">View Listing</button>
+          <button class="btn-secondary px-6" id="closeModalBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing script.js for global interactions -->
+  <script src="script.js"></script>
+  <!-- Sell page specific logic -->
+  <script src="sell.js"></script>
+</body>
+</html>

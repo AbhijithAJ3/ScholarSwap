@@ -1,0 +1,59 @@
+/* styles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f17;
+    color: #f5f3ff;
+}
+
+.glass-card {
+    background: rgba(24, 24, 36, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #a78bfa, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+.category-card:hover {
+    transform: scale(1.03);
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #7c3aed, #6d28d9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(24, 24, 36, 0.7);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: rgba(33, 33, 48, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+}

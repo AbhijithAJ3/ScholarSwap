@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | ScholarSwap</title>
+  <!-- Link to the new contact-specific CSS file -->
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <!-- Removed the embedded <style> block -->
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header class="glass-card sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-exchange-alt text-purple-500 text-2xl"></i>
+        <h1 class="text-2xl font-bold gradient-text">ScholarSwap</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="index.html" class="hover:text-purple-400 transition duration-300">Home</a>
+        <a href="browse.html" class="hover:text-purple-400 transition duration-300">Browse</a>
+        <a href="sell.html" class="hover:text-purple-400 transition duration-300">Sell</a>
+        <a href="contact.html" class="text-purple-500 font-semibold hover:text-purple-400 transition duration-300">Contact Us</a>
+        <a href="profile.html" class="hover:text-purple-400 transition duration-300">Profile</a>
+      </nav>
+      <button class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-3xl mx-auto">
+        <i class="fas fa-headset text-4xl text-purple-400 mb-4"></i>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Our Friendly Team</h1>
+        <p class="text-lg text-purple-200">Let us know how we can help. We're always here for you.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <!-- Card 1: Chat to sales -->
+        <div class="contact-card glass-card p-6 rounded-2xl text-center flex flex-col">
+            <div class="contact-icon-wrapper w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <i class="fas fa-comments text-xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Chat to sales</h3>
+            <p class="text-purple-300 mb-4 flex-grow">Speak to our friendly team.</p>
+            <a href="mailto:sales@scholarswap.com" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">sales@scholarswap.com</a>
+        </div>
+
+        <!-- Card 2: Chat to support -->
+        <div class="contact-card glass-card p-6 rounded-2xl text-center flex flex-col">
+            <div class="contact-icon-wrapper w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <i class="fas fa-question-circle text-xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Chat to support</h3>
+            <p class="text-purple-300 mb-4 flex-grow">We're here to help.</p>
+            <a href="mailto:support@scholarswap.com" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">support@scholarswap.com</a>
+        </div>
+
+        <!-- Card 3: Visit us -->
+        <div class="contact-card glass-card p-6 rounded-2xl text-center flex flex-col">
+            <div class="contact-icon-wrapper w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <i class="fas fa-map-marker-alt text-xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Visit us</h3>
+            <p class="text-purple-300 mb-4 flex-grow">Visit our office HQ.</p>
+            <a href="#" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">View on Google Maps</a>
+        </div>
+
+        <!-- Card 4: Call us -->
+        <div class="contact-card glass-card p-6 rounded-2xl text-center flex flex-col">
+            <div class="contact-icon-wrapper w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <i class="fas fa-phone-alt text-xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Call us</h3>
+            <p class="text-purple-300 mb-4 flex-grow">Mon-Fri from 8am to 5pm.</p>
+            <a href="tel:+15550000000" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">+1 (555) 000-0000</a>
+        </div>
+    </div>
+  </main>
+  
+  <!-- Link to the new contact-specific JS file -->
+  <script src="contact.js"></script>
+
+</body>
+</html>
